@@ -17,14 +17,14 @@ async function createTodo(data: FormData) {
 export default function Page() {
   return (
     <>
-      <header className="flex justify-between items-center mb-4">
-        <h1 className="text-2xl">New</h1>
+      <header className="flex justify-between items-center pt-10 pb-2 px-10">
+        <h1 className="text-2xl text-center">New</h1>
       </header>
-      <form action={createTodo} className="flex gap-2 flex-col">
+      <form action={createTodo} className="flex gap-2 flex-col mx-10">
         <input
           type="text"
           name="title"
-          className="border border-slate-300 bg-transparent rounded px-2 py-1 outline-none focus-within:border-slate-100"
+          className="border border-slate-300 bg-transparent rounded mx-2 py-1 outline-none focus-within:border-slate-100 px-5"
         />
         <div className="flex gap-1 justify-end">
           <Link
