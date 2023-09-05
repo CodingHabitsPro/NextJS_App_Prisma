@@ -1,63 +1,61 @@
-This is a Next.js 13 project.
+ # Next.js Todo App with Prisma and Tailwind
 
-## Getting Started
+This is a simple Next.js app that allows users to create and manage todo items. It uses Prisma for the database and Tailwind for styling.
 
-To get started, clone the repo and install the dependencies:
+## Prerequisites
 
-```bash
-git clone https://github.com/your-username/next-js-13.git
-cd next-js-13
+To run this app, you will need the following:
+
+* Node.js 16 or later
+* npm 8 or later
+* A PostgreSQL database
+
+## Installation
+
+1. Clone the repo:
+
+```
+git clone https://github.com/your-username/next-js-todo-app.git
+```
+
+2. Install the dependencies:
+
+```
 npm install
 ```
 
-Once the dependencies are installed, you can run the development server:
+3. Create a `.env` file in the root directory of the project and add your database connection string to it:
 
-```bash
+```
+DATABASE_URL=postgres://localhost:5432/next-js-todo-app
+```
+
+4. Start the development server:
+
+```
 npm run dev
 ```
 
-The development server will be running on port 3000. You can open your browser to http://localhost:3000 to see the project.
+5. Open your browser and go to `http://localhost:3000` to see the app.
 
-## Building the Project
+## Usage
 
-To build the project for production, run the following command:
+To create a new todo item, click on the "New" button in the header. A form will appear where you can enter the title of the todo item. Click on the "Create" button to save the todo item.
 
-```bash
-npm run build
-```
+To mark a todo item as completed, click on the checkbox next to the todo item.
 
-The build artifacts will be output to the `.next` directory.
+To delete a todo item, click on the "X" button next to the todo item.
 
-## Starting the Project
+## Code Explanation
 
-To start the project in production mode, run the following command:
+The code for this app is located in the following files:
 
-```bash
-npm run start
-```
-
-The project will be started on port 3000. You can open your browser to http://localhost:3000 to see the project.
-
-## Linting the Project
-
-To lint the project, run the following command:
-
-```bash
-npm run lint
-```
-
-The linter will check the project for any errors.
-
-## Testing the Project
-
-To test the project, run the following command:
-
-```bash
-npm run test
-```
-
-The tests will be run in the browser.
-
-## Troubleshooting
-
-If you have any problems getting started, please feel free to open an issue on the project's GitHub page.
+* `next.config.js`: This file contains the Next.js configuration for the app.
+* `package.json`: This file contains the dependencies for the app.
+* `prisma/migrations/20230905145332_dev/migration.sql`: This file contains the SQL migrations for the app.
+* `prisma/schema.prisma`: This file contains the Prisma schema for the app.
+* `src/app/layout.tsx`: This file contains the layout for the app.
+* `src/app/new/page.tsx`: This file contains the page for creating new todo items.
+* `src/app/page.tsx`: This file contains the page for listing todo items.
+* `src/components/TodoItem.tsx`: This file contains the component for displaying todo items.
+* `src/db
